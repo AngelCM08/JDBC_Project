@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC_Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/postgresql-42.5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ACBMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ACBMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DBAccessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Identity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PlayerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TeamController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db.properties" afterDir="false" />
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="First Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +28,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/dam2a/IdeaProjects/JDBC_Project/lib"
+    "last_opened_file_path": "/home/dam2a/IdeaProjects/JDBC_Project/lib/postgresql-42.5.1.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -60,6 +49,18 @@
       <option name="presentableId" value="Default" />
       <updated>1673364352050</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1673369730865</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673369730865</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
 </project>
