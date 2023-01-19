@@ -1,15 +1,18 @@
+import action.Actions;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.text.ParseException;
 
 public class ACBMain {
+	public static Connection c;
 
 	public static void main(String[] args) throws IOException, SQLException, ParseException {
 		ACBMenu menu = new ACBMenu();
 		
 		ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
-		Connection c = connectionFactory.connect();
+		c = connectionFactory.connect();
 
 		TeamController teamController = new TeamController(c);
 		PlayerController playerController = new PlayerController(c);
@@ -34,8 +37,8 @@ public class ACBMain {
 		while (option > 0 && option < 12) {
 			switch (option) {
 			case 1:
-				teamController.showTeams();
-				// dbaccessor.mostraAutors();
+				Actions.FillTable(c, "objeto");
+				Actions.FillTable(c, "personaje");
 				break;
 
 			case 2:
@@ -67,7 +70,7 @@ public class ACBMain {
 				break;
 
 			case 9:
-				// dbaccessor.desassignaArticleARevista(conn);
+				Actions.restart(c);
 				break;
 
 			case 10:

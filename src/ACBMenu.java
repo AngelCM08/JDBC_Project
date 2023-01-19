@@ -16,7 +16,7 @@ public class ACBMenu {
 
 			System.out.println(" \nMENU PRINCIPAL \n");
 
-			System.out.println("1. Mostra equips");
+			System.out.println("1. Test");
 			System.out.println("2. Mostra jugadors d'un determinat equip");
 			System.out.println("3. Crea Equip");
 			System.out.println("4. Crea Jugador");
@@ -24,7 +24,7 @@ public class ACBMenu {
 			System.out.println("6. Mostra jugadors a un equip");
 			System.out.println("7. Assigna jugador a un equip");
 			System.out.println("8. Desvincula jugador d'un equip");
-			System.out.println("9. Carrega estadístiques");
+			System.out.println("9. Restart DB");
 			System.out.println("10. Sortir");
 			System.out.println("Esculli opció: ");
 			try {
