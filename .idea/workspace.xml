@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/opencsv.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/Actions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/monstruo.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/objeto.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/personaje.csv" afterDir="false" />
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDBC_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ACBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACBMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ACBMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACBMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Action/RestartDBInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Actions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674147241003</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Actions WIP">
+      <created>1674154971058</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674154971058</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -104,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Actions WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actions WIP" />
   </component>
 </project>
