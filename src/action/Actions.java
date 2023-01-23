@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,17 +31,34 @@ public class Actions {
     }
 
     public static void FillTable(Connection c, String tabla){
-        //List<String[]> data = GetDataFromCSV(tabla);
-        //TODO menuda fumada estoxD
+        String values = "";
+        List<String> header = new ArrayList<>();
+        List<String[]> data = GetDataFromCSV(tabla);
+        data.forEach(d -> System.out.println(Arrays.toString(d)));
         try {
-            String query = "SELECT column_name FROM information_schema.columns WHERE table_a = '"+tabla+"';";
-            PreparedStatement statement = c.prepareStatement(query);
-            ResultSet resultSet = statement.executeQuery();
+            String query = "SELECT column_name FROM information_schema.columns WHERE table_name = ?;";
+            PreparedStatement ps = c.prepareStatement(query);
+            ps.setString(1,tabla);
+            ResultSet resultSet = ps.executeQuery();
+
             while (resultSet.next()) {
-                System.out.println(resultSet.getString("column1"));
+                header.add(resultSet.getString(1));
             }
-            /*Statement st = c.createStatement();
-            st.*/
+
+            for (int i = 0; i < header.size(); i++) {
+                if(i == 0) values = values.concat("(?, ");
+                else if(i+1 == header.size()) values = values.concat("?)");
+                else values = values.concat("?, ");
+            }
+
+            String insert = "INSERT INTO ? "+values+" VALUES "+values;
+            ps = c.prepareStatement(insert);
+
+            for (int i = 1; i <= header.size(); i++) {
+                //TODO Xd
+                ps.setString(i, );
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

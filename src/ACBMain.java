@@ -37,7 +37,7 @@ public class ACBMain {
 		while (option > 0 && option < 12) {
 			switch (option) {
 			case 1:
-				Actions.FillTable(c, "objeto");
+				//Actions.FillTable(c, "objeto");
 				Actions.FillTable(c, "personaje");
 				break;
 
