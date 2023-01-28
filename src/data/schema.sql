@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS tboia.Personaje;
 
 CREATE TABLE IF NOT EXISTS tboia.Personaje (
 idPersonaje SERIAL NOT NULL,
-icono VARCHAR(45),
+icono VARCHAR(500),
 nombre VARCHAR(45),
 vida INTEGER,
 daño VARCHAR(45),

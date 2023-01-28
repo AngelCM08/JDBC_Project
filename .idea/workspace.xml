@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP">
+      <change afterPath="$PROJECT_DIR$/src/todo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ACBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACBMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/action/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/CreateTablesTboiaPostgreSql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/personaje.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/personaje.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,8 @@
     "last_opened_file_path": "/home/dam2a/IdeaProjects/JDBC_Project",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
