@@ -16,22 +16,6 @@ public class ACBMain {
 
 		TeamController teamController = new TeamController(c);
 		PlayerController playerController = new PlayerController(c);
-		
-		
-//		Connection conn = null;
-//		Identity identity;
-//		int option;
-//		int intents = 0;
-//		DBAccessor dbaccessor = new DBAccessor();
-//		dbaccessor.init();
-//		while (intents < 3 && conn == null) {
-//			identity = menu.authenticate(intents);
-//			// prova de test
-//			identity.toString();
-//
-//			conn = dbaccessor.getConnection(identity);
-//			intents++;
-//		}
 
 		int option = menu.mainMenu();
 		while (option > 0 && option < 12) {

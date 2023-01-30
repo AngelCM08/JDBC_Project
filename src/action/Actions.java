@@ -39,7 +39,7 @@ public class Actions {
         List<String[]> data = GetDataFromCSV(tabla);
 
         try {
-            String query = "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = ?;";
+            String query = "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = ? ORDER BY ordinal_position;";
             PreparedStatement ps_header = c.prepareStatement(query);
             ps_header.setString(1,tabla);
             ResultSet resultSet = ps_header.executeQuery();
@@ -48,7 +48,8 @@ public class Actions {
                 header.add(resultSet.getString(1));
                 data_types.add(resultSet.getString(2));
             }
-            data_types.forEach(System.out::println);
+            System.out.println(Arrays.toString(header.toArray()));
+            System.out.println(Arrays.toString(data_types.toArray()));
 
             for (int i = 0; i < header.size(); i++) {
                 if(i == 0) values = values.concat("(?, ");
@@ -59,8 +60,9 @@ public class Actions {
             String insert = "INSERT INTO "+tabla+"("+header.toString().substring(1,header.toString().length()-1)+") VALUES "+values+";";
             PreparedStatement ps_insert = c.prepareStatement(insert);
 
-            for (int i = 0; i < data.size(); i++) {
+            for (int i = 1; i <= header.size(); i++) {
                 String[] fields = data.get(i);
+                System.out.println(Arrays.toString(fields));
                 try {
                     for (int j = 0; j < fields.length; j++) {
                         if(data_types.get(j).equals("integer")){
