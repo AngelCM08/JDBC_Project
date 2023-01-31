@@ -87,6 +87,16 @@ public class Actions {
         }
     }
 
+    public static void selectAllTable(Connection c, String tabla){
+        try {
+            ResultSet s = c.createStatement().executeQuery("SELECT * FROM "+tabla);
+            while(s.next()) System.out.println(s.toString());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
     public static void sortir(Connection c) {
         System.out.println("ADÉU!");
         try {

@@ -18,7 +18,7 @@ public class ACBMain {
 		PersonajeController playerController = new PersonajeController(c);
 
 		int option = menu.mainMenu();
-		while (option > 0 && option < 9) {
+		while (option != 8) {
 			switch (option) {
 			case 1: //Poblar o restaurar taules.
 				Actions.restart(c);
@@ -27,31 +27,32 @@ public class ACBMain {
 				Actions.FillTable(c, "monstruo");
 				break;
 
-			case 2: // Consultes.
+			case 2: // Consultas.
+				option = menu.TablesMenu();
+				Actions.selectAllTable(c,"personaje");
+				break;
+
+			case 3: // Insertar registro.
 
 				break;
 
-			case 3: // Insertar registre.
+			case 4: // Actualizar registro.
 
 				break;
 
-			case 4: // Actualitzar registre.
+			case 5: // Eliminar registro.
 
 				break;
 
-			case 5: // Eliminar registre.
+			case 6: // Eliminar registros segun condición.
 
 				break;
 
-			case 6: // Eliminar registres segons condició.
-
-				break;
-
-			case 7: // Buidar taules.
+			case 7: // Vaciar tablas.
 				Actions.restart(c);
 				break;
 
-			case 8: // Finalitzar l'execució del programa.
+			case 8: // Finalizar la ejecución del programa.
 				Actions.sortir(c);
 				break;
 
