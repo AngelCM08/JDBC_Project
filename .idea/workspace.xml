@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP">
-      <change afterPath="$PROJECT_DIR$/src/todo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/CreateTablesTboiaPostgreSql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/personaje.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/personaje.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.properties" afterDir="false" />
-    </list>
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674157565367</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Actions WIP">
+      <created>1674933664544</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674933664545</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
