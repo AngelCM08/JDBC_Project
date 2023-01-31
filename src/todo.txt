@@ -19,3 +19,5 @@ Manejo de la conexión mediante un menú de terminal que debe tener:
     TODO Posibilidad de modificar diferentes registros de información.
     TODO Posibilidad de eliminar un registro concreto de información.
     TODO Posibilidad de eliminar un conjunto de registros de información que cumplan una condición.
+
+TODO montar autenticación con la clase Identity y la función authenticate de la clase ACBMenu.

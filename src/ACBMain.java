@@ -15,60 +15,49 @@ public class ACBMain {
 		c = connectionFactory.connect();
 
 		TeamController teamController = new TeamController(c);
-		PlayerController playerController = new PlayerController(c);
+		PersonajeController playerController = new PersonajeController(c);
 
 		int option = menu.mainMenu();
-		while (option > 0 && option < 12) {
+		while (option > 0 && option < 9) {
 			switch (option) {
-			case 1:
-				//Actions.FillTable(c, "objeto");
+			case 1: //Poblar o restaurar taules.
+				Actions.restart(c);
+				Actions.FillTable(c, "objeto");
 				Actions.FillTable(c, "personaje");
+				Actions.FillTable(c, "monstruo");
 				break;
 
-			case 2:
-				// dbaccessor.mostraRevistes();
+			case 2: // Consultes.
+
 				break;
 
-			case 3:
-				// dbaccessor.mostraRevistesArticlesAutors();
+			case 3: // Insertar registre.
+
 				break;
 
-			case 4:
-				// dbaccessor.altaAutor();
+			case 4: // Actualitzar registre.
+
 				break;
 
-			case 5:
-				// dbaccessor.altaRevista();
+			case 5: // Eliminar registre.
+
 				break;
 
-			case 6:
-				// dbaccessor.altaArticle();
+			case 6: // Eliminar registres segons condició.
+
 				break;
 
-			case 7:
-				// dbaccessor.actualitzarTitolRevistes(conn);
-				break;
-
-			case 8:
-				// dbaccessor.afegeixArticleARevista(conn);
-				break;
-
-			case 9:
+			case 7: // Buidar taules.
 				Actions.restart(c);
 				break;
 
-			case 10:
-				// dbaccessor.carregaAutors(conn);
-				break;
-
-			case 11:
-				// dbaccessor.sortir();
+			case 8: // Finalitzar l'execució del programa.
+				Actions.sortir(c);
 				break;
 
 			default:
 				System.out.println("Introdueixi una de les opcions anteriors");
 				break;
-
 			}
 			option = menu.mainMenu();
 		}

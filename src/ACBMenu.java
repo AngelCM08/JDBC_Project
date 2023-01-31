@@ -13,24 +13,21 @@ public class ACBMenu {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		do {
-
 			System.out.println(" \nMENU PRINCIPAL \n");
 
-			System.out.println("1. Test");
-			System.out.println("2. Mostra jugadors d'un determinat equip");
-			System.out.println("3. Crea Equip");
-			System.out.println("4. Crea Jugador");
-			System.out.println("5. Crea Partit");
-			System.out.println("6. Mostra jugadors a un equip");
-			System.out.println("7. Assigna jugador a un equip");
-			System.out.println("8. Desvincula jugador d'un equip");
-			System.out.println("9. Restart DB");
-			System.out.println("10. Sortir");
-			System.out.println("Esculli opció: ");
+			System.out.println("1. Poblar o restaurar tablas.");
+			System.out.println("2. Consultas."); //Mostrar tablas completas o hacer selects específicos.
+			System.out.println("3. Insertar registro.");
+			System.out.println("4. Actualitzar registro.");
+			System.out.println("5. Eliminar registro.");
+			System.out.println("6. Eliminar registros según condición.");
+			System.out.println("7. Vaciar tablas.");
+			System.out.println("8. Salir.");
+			System.out.println("Escoger opción: ");
 			try {
 				option = Integer.parseInt(br.readLine());
 			} catch (NumberFormatException | IOException e) {
-				System.out.println("valor no vàlid");
+				System.out.println("valor no válido");
 				e.printStackTrace();
 
 			}
