@@ -15,13 +15,14 @@ public class ACBMenu {
 		System.out.println(" \nMENU PRINCIPAL \n");
 
 		System.out.println("1. Poblar o restaurar tablas.");
-		System.out.println("2. Consultas."); //Mostrar tablas completas o hacer selects específicos.
-		System.out.println("3. Insertar registro.");
-		System.out.println("4. Actualizar registro.");
-		System.out.println("5. Eliminar registro.");
-		System.out.println("6. Eliminar registros según condición.");
-		System.out.println("7. Vaciar tablas.");
-		System.out.println("8. Salir.");
+		System.out.println("2. Mostrar tabla completa.");
+		System.out.println("3. Consultas específicas.");
+		System.out.println("4. Insertar registro.");
+		System.out.println("5. Actualizar registro.");
+		System.out.println("6. Eliminar registro.");
+		System.out.println("7. Eliminar registros según condición.");
+		System.out.println("8. Vaciar tablas.");
+		System.out.println("9. Salir.");
 		System.out.print("Escoger opción: ");
 
 		option = sc.nextInt();
@@ -42,7 +43,7 @@ public class ACBMenu {
 
 			option = sc.nextInt();
 
-		} while (option >= 1 && option <= 10);
+		} while (option < 1 || option > 4);
 		return option;
 	}
 

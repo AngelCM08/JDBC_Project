@@ -17,8 +17,9 @@ public class ACBMain {
 		TeamController teamController = new TeamController(c);
 		PersonajeController playerController = new PersonajeController(c);
 
+		String table = "";
 		int option = menu.mainMenu();
-		while (option != 8) {
+		while (option != 9) {
 			switch (option) {
 			case 1: //Poblar o restaurar taules.
 				Actions.restart(c);
@@ -26,33 +27,44 @@ public class ACBMain {
 				Actions.FillTable(c, "personaje");
 				Actions.FillTable(c, "monstruo");
 				break;
-
 			case 2: // Consultas.
-				option = menu.TablesMenu();
-				Actions.selectAllTable(c,"personaje");
+				switch (menu.TablesMenu()) {
+					case 1 -> table = "personaje";
+					case 2 -> table = "monstruo";
+					case 3 -> table = "objeto";
+				}
+				Actions.selectAllTable(c, table);
 				break;
-
-			case 3: // Insertar registro.
-
-				break;
-
-			case 4: // Actualizar registro.
-
-				break;
-
-			case 5: // Eliminar registro.
-
-				break;
-
-			case 6: // Eliminar registros segun condición.
+			case 3: // Consultas específicas.
+				switch (menu.TablesMenu()) {
+					case 1 -> table = "personaje";
+					case 2 -> table = "monstruo";
+					case 3 -> table = "objeto";
+				}
 
 				break;
 
-			case 7: // Vaciar tablas.
+			case 4: // Insertar registro.
+
+				break;
+
+			case 5: // Actualizar registro.
+
+				break;
+
+			case 6: // Eliminar registro.
+
+				break;
+
+			case 7: // Eliminar registros segun condición.
+
+				break;
+
+			case 8: // Vaciar tablas.
 				Actions.restart(c);
 				break;
 
-			case 8: // Finalizar la ejecución del programa.
+			case 9: // Finalizar la ejecución del programa.
 				Actions.sortir(c);
 				break;
 

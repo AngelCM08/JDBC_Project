@@ -32,15 +32,9 @@ public class Actions {
         List<String[]> data = GetDataFromCSV(tabla);
 
         try {
-            String query = "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = ? ORDER BY ordinal_position;";
-            PreparedStatement ps_header = c.prepareStatement(query);
-            ps_header.setString(1,tabla);
-            ResultSet resultSet = ps_header.executeQuery();
-
-            while (resultSet.next()) {
-                header.add(resultSet.getString(1));
-                data_types.add(resultSet.getString(2));
-            }
+            List<List<String>> columnMetaData = GetHeader(c,tabla);
+            header = columnMetaData.get(0);
+            data_types = columnMetaData.get(1);
             //System.out.println(Arrays.toString(header.toArray()));
             //System.out.println(Arrays.toString(data_types.toArray()));
 
@@ -55,10 +49,10 @@ public class Actions {
 
             for (int i = 0; i < data.size(); i++) {
                 String[] fields = data.get(i);
-                System.out.println(Arrays.toString(fields));
+                //System.out.println(Arrays.toString(fields));
                 try {
                     for (int j = 0; j < fields.length; j++) {
-                        System.out.println(fields[j]);
+                        //System.out.println(fields[j]);
                         if(data_types.get(j).equals("integer")){
                             ps_insert.setInt(j+1, Integer.parseInt(fields[j]));
                         }else{
@@ -66,11 +60,30 @@ public class Actions {
                         }
                     }
                     System.out.println(ps_insert);
-                    System.out.println(ps_insert.execute());
+                    ps_insert.execute();
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
             }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static List<List<String>> GetHeader(Connection c, String tabla) {
+        List<String> header = new ArrayList<>();
+        List<String> data_types = new ArrayList<>();
+        try {
+            String query = "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = ? ORDER BY ordinal_position;";
+            PreparedStatement ps_header = c.prepareStatement(query);
+            ps_header.setString(1,tabla);
+            ResultSet resultSet = ps_header.executeQuery();
+
+            while (resultSet.next()) {
+                header.add(resultSet.getString(1));
+                data_types.add(resultSet.getString(2));
+            }
+            return List.of(header, data_types);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -90,7 +103,13 @@ public class Actions {
     public static void selectAllTable(Connection c, String tabla){
         try {
             ResultSet s = c.createStatement().executeQuery("SELECT * FROM "+tabla);
-            while(s.next()) System.out.println(s.toString());
+            while(s.next()){
+                for (int i = 1; i <= s.getMetaData().getColumnCount(); i++) {
+                    if(i != s.getMetaData().getColumnCount()) System.out.print(s.getMetaData().getColumnName(i) +": "+ s.getString(i) + "\t|\t");
+                    else System.out.print(s.getMetaData().getColumnName(i) +": "+ s.getString(i));
+                }
+                System.out.println();
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
