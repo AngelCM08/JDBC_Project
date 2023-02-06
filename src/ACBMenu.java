@@ -1,6 +1,10 @@
+import action.Actions;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.util.List;
 import java.util.Scanner;
 
 public class ACBMenu {
@@ -65,6 +69,15 @@ public class ACBMenu {
 		return option;
 	}
 
+	public String ColumnsMenu(Connection c, String tabla) {
+		Scanner sc = new Scanner(System.in);
+		List<List<String>> header = Actions.GetHeader(c, tabla);
+
+		for (int i = 0; i < header.size(); i++) {
+			System.out.println(i+". "+header.get(i).get(0));
+		}
+		System.out.println("");
+	}
 	public Identity authenticate(int tries) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("============================ACB=============================");

@@ -39,7 +39,7 @@ public class ACBMain {
 					case 3 -> table = "objeto";
 				}
 				Actions.selectAllTable(c, table);
-				switch (menu.)
+				Actions.selectSpecificText(c, table, menu.ColumnsMenu());
 				break;
 
 			case 4: // Insertar registro.

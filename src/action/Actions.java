@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+import static org.apache.commons.lang3.time.DurationFormatUtils.s;
+
 public class Actions {
     public static void restart(Connection c){
         try {
@@ -126,12 +128,9 @@ public class Actions {
             pst.setString(2, columna);
             System.out.println("Que texto quieres buscar en la columna "+columna);
             pst.setString(3, sc.nextLine());
-            while(s.next()){
-                for (int i = 1; i <= s.getMetaData().getColumnCount(); i++) {
-                    if(i != s.getMetaData().getColumnCount()) System.out.print(s.getMetaData().getColumnName(i) +": "+ s.getString(i) + "\t|\t");
-                    else System.out.print(s.getMetaData().getColumnName(i) +": "+ s.getString(i));
-                }
-                System.out.println();
+            ResultSet result = pst.executeQuery();
+            while(result.next()){
+                System.out.println(result.getString(0));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
