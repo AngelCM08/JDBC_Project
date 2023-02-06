@@ -14,9 +14,6 @@ public class ACBMain {
 		ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
 		c = connectionFactory.connect();
 
-		TeamController teamController = new TeamController(c);
-		PersonajeController playerController = new PersonajeController(c);
-
 		String table = "";
 		int option = menu.mainMenu();
 		while (option != 9) {
@@ -41,7 +38,8 @@ public class ACBMain {
 					case 2 -> table = "monstruo";
 					case 3 -> table = "objeto";
 				}
-
+				Actions.selectAllTable(c, table);
+				switch (menu.)
 				break;
 
 			case 4: // Insertar registro.

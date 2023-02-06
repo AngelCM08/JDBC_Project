@@ -47,6 +47,24 @@ public class ACBMenu {
 		return option;
 	}
 
+	public int ConsultasEspecificasMenu() {
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println(" \nQUE TIPO DE ACCIÓN QUIERES REALIZAR\n");
+
+			System.out.println("1. Seleccionar todos los elementos que contengan un texto concreto.");
+			System.out.println("2. Seleccionar todos los elementos que cumplan una condición.");
+			System.out.println("3. Seleccionar una columna.");
+			System.out.println("3. Seleccionar una fila.");
+			System.out.println("4. Atrás.");
+			System.out.print("Escoger opción: ");
+
+			option = sc.nextInt();
+
+		} while (option < 1 || option > 4);
+		return option;
+	}
+
 	public Identity authenticate(int tries) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("============================ACB=============================");

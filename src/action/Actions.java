@@ -11,6 +11,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Actions {
@@ -115,6 +116,31 @@ public class Actions {
         }
 
     }
+
+    //TODO Seleccionar todos los elementos que contengan un texto concreto.
+    public static void selectSpecificText(Connection c, String tabla, String columna){
+        Scanner sc = new Scanner(System.in);
+        try {
+            PreparedStatement pst = c.prepareStatement("SELECT * FROM ? WHERE ? LIKE ?");
+            pst.setString(1, tabla);
+            pst.setString(2, columna);
+            System.out.println("Que texto quieres buscar en la columna "+columna);
+            pst.setString(3, sc.nextLine());
+            while(s.next()){
+                for (int i = 1; i <= s.getMetaData().getColumnCount(); i++) {
+                    if(i != s.getMetaData().getColumnCount()) System.out.print(s.getMetaData().getColumnName(i) +": "+ s.getString(i) + "\t|\t");
+                    else System.out.print(s.getMetaData().getColumnName(i) +": "+ s.getString(i));
+                }
+                System.out.println();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    //TODO Seleccionar todos los elementos que cumplan una condición.
+    //TODO Seleccionar elementos concretos.
 
     public static void sortir(Connection c) {
         System.out.println("ADÉU!");
