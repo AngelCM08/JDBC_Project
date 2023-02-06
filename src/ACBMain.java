@@ -14,77 +14,61 @@ public class ACBMain {
 		ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
 		c = connectionFactory.connect();
 
-		TeamController teamController = new TeamController(c);
-		PlayerController playerController = new PlayerController(c);
-		
-		
-//		Connection conn = null;
-//		Identity identity;
-//		int option;
-//		int intents = 0;
-//		DBAccessor dbaccessor = new DBAccessor();
-//		dbaccessor.init();
-//		while (intents < 3 && conn == null) {
-//			identity = menu.authenticate(intents);
-//			// prova de test
-//			identity.toString();
-//
-//			conn = dbaccessor.getConnection(identity);
-//			intents++;
-//		}
-
+		String table = "";
 		int option = menu.mainMenu();
-		while (option > 0 && option < 12) {
+		while (option != 9) {
 			switch (option) {
-			case 1:
-				//Actions.FillTable(c, "objeto");
+			case 1: //Poblar o restaurar taules.
+				Actions.restart(c);
+				Actions.FillTable(c, "objeto");
 				Actions.FillTable(c, "personaje");
+				Actions.FillTable(c, "monstruo");
+				break;
+			case 2: // Consultas.
+				switch (menu.TablesMenu()) {
+					case 1 -> table = "personaje";
+					case 2 -> table = "monstruo";
+					case 3 -> table = "objeto";
+				}
+				Actions.selectAllTable(c, table);
+				break;
+			case 3: // Consultas específicas.
+				switch (menu.TablesMenu()) {
+					case 1 -> table = "personaje";
+					case 2 -> table = "monstruo";
+					case 3 -> table = "objeto";
+				}
+				Actions.selectAllTable(c, table);
+				switch (menu.)
 				break;
 
-			case 2:
-				// dbaccessor.mostraRevistes();
+			case 4: // Insertar registro.
+
 				break;
 
-			case 3:
-				// dbaccessor.mostraRevistesArticlesAutors();
+			case 5: // Actualizar registro.
+
 				break;
 
-			case 4:
-				// dbaccessor.altaAutor();
+			case 6: // Eliminar registro.
+
 				break;
 
-			case 5:
-				// dbaccessor.altaRevista();
+			case 7: // Eliminar registros segun condición.
+
 				break;
 
-			case 6:
-				// dbaccessor.altaArticle();
-				break;
-
-			case 7:
-				// dbaccessor.actualitzarTitolRevistes(conn);
-				break;
-
-			case 8:
-				// dbaccessor.afegeixArticleARevista(conn);
-				break;
-
-			case 9:
+			case 8: // Vaciar tablas.
 				Actions.restart(c);
 				break;
 
-			case 10:
-				// dbaccessor.carregaAutors(conn);
-				break;
-
-			case 11:
-				// dbaccessor.sortir();
+			case 9: // Finalizar la ejecución del programa.
+				Actions.sortir(c);
 				break;
 
 			default:
 				System.out.println("Introdueixi una de les opcions anteriors");
 				break;
-
 			}
 			option = menu.mainMenu();
 		}

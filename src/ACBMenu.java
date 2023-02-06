@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class ACBMenu {
 	private int option;
@@ -10,34 +11,57 @@ public class ACBMenu {
 	}
 
 	public int mainMenu() {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
+		System.out.println(" \nMENU PRINCIPAL \n");
 
+		System.out.println("1. Poblar o restaurar tablas.");
+		System.out.println("2. Mostrar tabla completa.");
+		System.out.println("3. Consultas específicas.");
+		System.out.println("4. Insertar registro.");
+		System.out.println("5. Actualizar registro.");
+		System.out.println("6. Eliminar registro.");
+		System.out.println("7. Eliminar registros según condición.");
+		System.out.println("8. Vaciar tablas.");
+		System.out.println("9. Salir.");
+		System.out.print("Escoger opción: ");
+
+		option = sc.nextInt();
+
+		return option;
+	}
+
+	public int TablesMenu() {
+		Scanner sc = new Scanner(System.in);
 		do {
+			System.out.println(" \nSOBRE QUE TABLA QUIERES REALIZAR LA ACCIÓN\n");
 
-			System.out.println(" \nMENU PRINCIPAL \n");
+			System.out.println("1. Personaje.");
+			System.out.println("2. Monstruo.");
+			System.out.println("3. Objeto.");
+			System.out.println("4. Atrás.");
+			System.out.print("Escoger opción: ");
 
-			System.out.println("1. Test");
-			System.out.println("2. Mostra jugadors d'un determinat equip");
-			System.out.println("3. Crea Equip");
-			System.out.println("4. Crea Jugador");
-			System.out.println("5. Crea Partit");
-			System.out.println("6. Mostra jugadors a un equip");
-			System.out.println("7. Assigna jugador a un equip");
-			System.out.println("8. Desvincula jugador d'un equip");
-			System.out.println("9. Restart DB");
-			System.out.println("10. Sortir");
-			System.out.println("Esculli opció: ");
-			try {
-				option = Integer.parseInt(br.readLine());
-			} catch (NumberFormatException | IOException e) {
-				System.out.println("valor no vàlid");
-				e.printStackTrace();
+			option = sc.nextInt();
 
-			}
+		} while (option < 1 || option > 4);
+		return option;
+	}
 
-		} while (option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6 && option != 7
-				&& option != 8 && option != 9 && option != 10);
+	public int ConsultasEspecificasMenu() {
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println(" \nQUE TIPO DE ACCIÓN QUIERES REALIZAR\n");
 
+			System.out.println("1. Seleccionar todos los elementos que contengan un texto concreto.");
+			System.out.println("2. Seleccionar todos los elementos que cumplan una condición.");
+			System.out.println("3. Seleccionar una columna.");
+			System.out.println("3. Seleccionar una fila.");
+			System.out.println("4. Atrás.");
+			System.out.print("Escoger opción: ");
+
+			option = sc.nextInt();
+
+		} while (option < 1 || option > 4);
 		return option;
 	}
 
