@@ -33,10 +33,11 @@ public class ACBMain {
 				int opt = menu.ConsultasEspecificasMenu();
 				if(opt == 4 || (table = menu.TablesMenu()).equals("")) break;
 				Actions.selectAllTable(c, table);
+				String[] column_data = menu.ColumnsMenu(c, table);
 				switch (opt) {
-					case 1 -> Actions.selectSpecificText(c, table, menu.ColumnsMenu(c, table));
-					case 2 -> System.out.println("Seleccionar todos los elementos que cumplan una condición.");
-					case 3 -> Actions.selectColumn(c, table, menu.ColumnsMenu(c,table));
+					case 1 -> Actions.selectSpecificText(c, table, column_data);
+					case 2 -> Actions.selectByCondition(c, table, column_data);
+					case 3 -> Actions.selectColumn(c, table, column_data);
 				}
 				break;
 

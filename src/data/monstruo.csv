@@ -1,4 +1,4 @@
-"id,icono,nombre,vida,descripcion"
+"id","icono","nombre","vida","descripcion"
 "1","https://static.wikia.nocookie.net/bindingofisaac/images/5/55/FrowningGaperEnemigo-x2.png/revision/latest?cb=20180719100247&path-prefix=es","Frowning Gaper","10","Monstruos que persiguen al jugador de forma lenta inicialmente, adquiriendo velocidad si están lo suficientemente cerca. Suelen ser encontrados en grupos, y tienen suficiente inteligencia para intentar tomar caminos cortos o intentar cortar el paso al jugador."
 "2","https://static.wikia.nocookie.net/bindingofisaac/images/b/b2/GaperEnemigo-x2.png/revision/latest?cb=20180719100124&path-prefix=es","Gaper","10","Monstruos que siguen al jugador. A diferencia que los Frowning Gapers, los Gapers normales siempre caminan lento. Tienen la misma inteligencia artificial que los Frowning Gapers."
 "3","https://static.wikia.nocookie.net/bindingofisaac/images/8/8d/Flaming_Gaper.png/revision/latest?cb=20180719151559&path-prefix=es","Flaming Gaper","9","Gapers envueltos en llamas. Ellos son totalmente idénticos que los Gapers normales, con solamente un cambio totalmente cosmético."

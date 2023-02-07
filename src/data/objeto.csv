@@ -1,4 +1,4 @@
-"id,icono,nombre,descripcion"
+"id","icono","nombre","descripcion"
 "1","https://static.wikia.nocookie.net/bindingofisaac/images/f/f9/Objeto_Accidente_de_Lim%C3%B3n.png/revision/latest?cb=20210304050905&path-prefix=es","Accidente de Limón","Crea un pequeño charco de creep, dañando a los enemigos que lo pisen."
 "2","https://static.wikia.nocookie.net/bindingofisaac/images/d/dc/Objeto_Botella_de_P%C3%ADldoras_de_Mam%C3%A1.png/revision/latest?cb=20210304051638&path-prefix=es","Botella de Píldoras de Mamá","Genera una píldora al azar."
 "3","https://static.wikia.nocookie.net/bindingofisaac/images/7/74/Objeto_Cabeza_de_Tammy.png/revision/latest?cb=20210304051912&path-prefix=es","Cabeza de Tammy","Dispara 10 lágrimas alrededor de Isaac que toman su daño, velocidad de proyectil y efectos de lágrima."
