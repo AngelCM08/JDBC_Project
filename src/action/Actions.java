@@ -9,12 +9,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-
-import static org.apache.commons.lang3.time.DurationFormatUtils.s;
 
 public class Actions {
     public static void restart(Connection c){
@@ -86,6 +83,8 @@ public class Actions {
                 header.add(resultSet.getString(1));
                 data_types.add(resultSet.getString(2));
             }
+            //header.forEach(System.out::println);
+            //data_types.forEach(System.out::println);
             return List.of(header, data_types);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -116,30 +115,55 @@ public class Actions {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
-    //TODO Seleccionar todos los elementos que contengan un texto concreto.
-    public static void selectSpecificText(Connection c, String tabla, String columna){
+    //Seleccionar todos los elementos que contengan un texto concreto.
+    public static void selectSpecificText(Connection c, String tabla, String[] columna){
         Scanner sc = new Scanner(System.in);
         try {
-            PreparedStatement pst = c.prepareStatement("SELECT * FROM ? WHERE ? LIKE ?");
-            pst.setString(1, tabla);
-            pst.setString(2, columna);
-            System.out.println("Que texto quieres buscar en la columna "+columna);
-            pst.setString(3, sc.nextLine());
+            System.out.println("Que texto quieres buscar en la columna "+columna[0]);
+            PreparedStatement pst;
+            if(columna[1].equals("integer")){
+                pst = c.prepareStatement("SELECT * FROM "+tabla+" WHERE "+columna[0]+" = ?");
+                pst.setInt(1, sc.nextInt());
+                sc.nextLine();
+            }else{
+                pst = c.prepareStatement("SELECT * FROM "+tabla+" WHERE "+columna[0]+" ILIKE ?");
+                pst.setString(1, sc.nextLine());
+            }
+
             ResultSet result = pst.executeQuery();
             while(result.next()){
-                System.out.println(result.getString(0));
+                for (int i = 1; i <= result.getMetaData().getColumnCount(); i++) {
+                    if(i != result.getMetaData().getColumnCount()) System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i) + " | ");
+                    else System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i));
+                }
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     //TODO Seleccionar todos los elementos que cumplan una condición.
-    //TODO Seleccionar elementos concretos.
+
+    //TO DO Seleccionar una columna específica.
+    public static void selectColumn(Connection c, String tabla, String[] columna) {
+        try {
+            PreparedStatement pst = c.prepareStatement("SELECT "+columna[0]+" FROM "+tabla);
+            //TODO*********************************************************************************************
+            System.out.println(pst.toString());
+            ResultSet result = pst.executeQuery();
+            System.out.println("Mostrando columna "+columna[0]+" de la tabla "+tabla);
+            while(result.next()){
+                for (int i = 1; i <= result.getMetaData().getColumnCount(); i++) {
+                    if(i != result.getMetaData().getColumnCount()) System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i) + " | ");
+                    else System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i));
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static void sortir(Connection c) {
         System.out.println("ADÉU!");
@@ -150,4 +174,5 @@ public class Actions {
         }
         System.exit(0);
     }
+
 }

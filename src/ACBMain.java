@@ -15,6 +15,7 @@ public class ACBMain {
 		c = connectionFactory.connect();
 
 		String table = "";
+		boolean out;
 		int option = menu.mainMenu();
 		while (option != 9) {
 			switch (option) {
@@ -25,21 +26,18 @@ public class ACBMain {
 				Actions.FillTable(c, "monstruo");
 				break;
 			case 2: // Consultas.
-				switch (menu.TablesMenu()) {
-					case 1 -> table = "personaje";
-					case 2 -> table = "monstruo";
-					case 3 -> table = "objeto";
-				}
+				if((table = menu.TablesMenu()).equals("")) break;
 				Actions.selectAllTable(c, table);
 				break;
 			case 3: // Consultas específicas.
-				switch (menu.TablesMenu()) {
-					case 1 -> table = "personaje";
-					case 2 -> table = "monstruo";
-					case 3 -> table = "objeto";
-				}
+				int opt = menu.ConsultasEspecificasMenu();
+				if(opt == 4 || (table = menu.TablesMenu()).equals("")) break;
 				Actions.selectAllTable(c, table);
-				Actions.selectSpecificText(c, table, menu.ColumnsMenu());
+				switch (opt) {
+					case 1 -> Actions.selectSpecificText(c, table, menu.ColumnsMenu(c, table));
+					case 2 -> System.out.println("Seleccionar todos los elementos que cumplan una condición.");
+					case 3 -> Actions.selectColumn(c, table, menu.ColumnsMenu(c,table));
+				}
 				break;
 
 			case 4: // Insertar registro.

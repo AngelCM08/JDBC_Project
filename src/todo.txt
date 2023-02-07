@@ -8,8 +8,8 @@ Manejo de la conexión mediante un menú de terminal que debe tener:
     TO DO Una opción que permita crear las tablas de la base de datos. (Actions.restart())
     TO DO Una opción que permita poblar masivamente las tablas de la base de datos leyendo los ficheros generados en la primera práctica. (Actions.FillTable)
 
-    TODO Diferentes opciones de consulta sobre la información. Ejemplos:
-        TODO Seleccionar todos los elementos que contengan un texto concreto.
+    Diferentes opciones de consulta sobre la información. Ejemplos:
+        TO DO Seleccionar todos los elementos que contengan un texto concreto.
         TODO Seleccionar todos los elementos que cumplan una condición.
         TODO Seleccionar elementos concretos.
 
@@ -19,5 +19,7 @@ Manejo de la conexión mediante un menú de terminal que debe tener:
     TODO Posibilidad de modificar diferentes registros de información.
     TODO Posibilidad de eliminar un registro concreto de información.
     TODO Posibilidad de eliminar un conjunto de registros de información que cumplan una condición.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TODO COMPROBAR QUE TODOS LOS MENUS NO PETAN AL INTRODUCIR COSAS RARAS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 TODO montar autenticación con la clase Identity y la función authenticate de la clase ACBMenu.

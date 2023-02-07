@@ -34,7 +34,7 @@ public class ACBMenu {
 		return option;
 	}
 
-	public int TablesMenu() {
+	public String TablesMenu() {
 		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println(" \nSOBRE QUE TABLA QUIERES REALIZAR LA ACCIÓN\n");
@@ -48,7 +48,12 @@ public class ACBMenu {
 			option = sc.nextInt();
 
 		} while (option < 1 || option > 4);
-		return option;
+		switch (option) {
+			case 1 -> { return "personaje"; }
+			case 2 -> { return "monstruo"; }
+			case 3 -> { return "objeto"; }
+		}
+		return "";
 	}
 
 	public int ConsultasEspecificasMenu() {
@@ -59,7 +64,6 @@ public class ACBMenu {
 			System.out.println("1. Seleccionar todos los elementos que contengan un texto concreto.");
 			System.out.println("2. Seleccionar todos los elementos que cumplan una condición.");
 			System.out.println("3. Seleccionar una columna.");
-			System.out.println("3. Seleccionar una fila.");
 			System.out.println("4. Atrás.");
 			System.out.print("Escoger opción: ");
 
@@ -69,14 +73,16 @@ public class ACBMenu {
 		return option;
 	}
 
-	public String ColumnsMenu(Connection c, String tabla) {
+	public String[] ColumnsMenu(Connection c, String tabla) {
 		Scanner sc = new Scanner(System.in);
 		List<List<String>> header = Actions.GetHeader(c, tabla);
 
-		for (int i = 0; i < header.size(); i++) {
-			System.out.println(i+". "+header.get(i).get(0));
+		for (int i = 0; i < header.get(0).size(); i++) {
+			System.out.println(i+". "+header.get(0).get(i));
 		}
-		System.out.println("");
+		System.out.println("Indica el valor de la columna que quieres seleccionar:");
+		int index = sc.nextInt();
+		return new String[]{header.get(0).get(index), header.get(1).get(index)};
 	}
 	public Identity authenticate(int tries) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
