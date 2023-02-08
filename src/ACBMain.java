@@ -1,6 +1,7 @@
 import actions.DB_Actions;
 import actions.DB_Deletes;
 import actions.DB_Selects;
+import actions.DB_Updates;
 import ui.ACBMenu;
 
 import java.sql.Connection;
@@ -15,8 +16,8 @@ public class ACBMain {
 		ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
 		c = connectionFactory.connect();
 		String table;
+		String[] column_data;
 		int opt;
-		boolean out;
 
 		int option = menu.mainMenu();
 		while (option != 9) {
@@ -35,7 +36,7 @@ public class ACBMain {
 				opt = menu.ConsultasEspecificasMenu();
 				if(opt == 4 || (table = menu.TablesMenu()).equals("")) break;
 				DB_Selects.selectAllTable(c, table);
-				String[] column_data = menu.ColumnsMenu(c, table);
+				column_data = menu.ColumnsMenu(c, table);
 				switch (opt) {
 					case 1 -> DB_Selects.selectSpecificText(c, table, column_data);
 					case 2 -> DB_Selects.selectByCondition(c, table, column_data);
@@ -48,7 +49,19 @@ public class ACBMain {
 				break;
 
 			case 5: // Actualizar registro.
-
+				opt = menu.UpdateMenu();
+				if(opt == 3 || (table = menu.TablesMenu()).equals("")) break;
+				DB_Selects.selectAllTable(c, table);
+				switch (opt) {
+					case 1 -> {
+						System.out.print("Indica el registro a actualizar: ");
+						DB_Updates.UpdateRegister(c, table, sc.nextInt());
+					}
+					case 2 -> {
+						column_data = menu.ColumnsMenu(c, table);
+						DB_Updates.updateRegistersByCondition(c, table, column_data);
+					}
+				}
 				break;
 
 			case 6: // Eliminar registro.

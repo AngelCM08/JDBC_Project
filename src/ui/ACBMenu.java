@@ -3,6 +3,8 @@ package ui;
 import actions.DB_Actions;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -114,20 +116,38 @@ public class ACBMenu {
 		return option;
 	}
 
-	/*public Identity authenticate(int tries) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("============================ACB=============================");
-		System.out.println("============================================================");
-		System.out.println("Avís: tens " + (3 - tries) + " intents per loginarte");
-		System.out.println("============================================================");
-		System.out.println("Inserta nom del usuari: ");
-		String user = br.readLine();
-		System.out.println("Inserta contrasenya: ");
-		String password = br.readLine();
+	public int UpdateMenu() {
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println(" \nQUE TIPO DE ACCIÓN QUIERES REALIZAR\n");
 
-		Identity identity = new Identity(user, password);
-		return identity;
+			System.out.println("1. Seleccionar registro y modificar sus elementos.");
+			System.out.println("2. Modificar varios registros según condición.");
+			System.out.println("3. Atrás.");
+			System.out.print("Escoger opción: ");
 
-	}*/
+			option = sc.nextInt();
+		} while (option < 1 || option > 3);
+		return option;
+	}
 
+	public int SelectFieldMenu(ResultSet result){
+		Scanner sc = new Scanner(System.in);
+		try {
+			int columnCount = result.getMetaData().getColumnCount();
+			do {
+				while(result.next()) {
+					for (int i = 1; i <= columnCount; i++) {
+						System.out.println(i + ". " + result.getMetaData().getColumnName(i) + ": " + result.getString(i));
+					}
+				}
+				System.out.println("0. Cancelar.");
+				System.out.print("Selecciona el atributo que quieres actualizar: ");
+				option = sc.nextInt();
+			} while (option < 0 || option > columnCount);
+			return option;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 }

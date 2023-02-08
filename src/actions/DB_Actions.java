@@ -16,8 +16,7 @@ import java.util.stream.Collectors;
 public class DB_Actions {
     public static void restart(Connection c){
         try {
-            Statement st = null;
-            st = c.createStatement();
+            Statement st = c.createStatement();
             BufferedReader br = new BufferedReader(new FileReader("src/data/schema.sql"));
             st.execute(br.lines().collect(Collectors.joining(" \n")));
         } catch (FileNotFoundException | SQLException e) {
