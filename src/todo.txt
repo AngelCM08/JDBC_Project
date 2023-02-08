@@ -17,9 +17,8 @@ Manejo de la conexión mediante un menú de terminal que debe tener:
         TODO Seleccionar un elemento concreto y permitir su modificación.
 
     TODO Posibilidad de modificar diferentes registros de información.
+
     TO DO Posibilidad de eliminar un registro concreto de información.
-    TODO Posibilidad de eliminar un conjunto de registros de información que cumplan una condición.
+    TO DO Posibilidad de eliminar un conjunto de registros de información que cumplan una condición.
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TODO COMPROBAR QUE TODOS LOS MENUS NO PETAN AL INTRODUCIR COSAS RARAS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-TODO montar autenticación con la clase Identity y la función authenticate de la clase ui.ACBMenu.
+TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! COMPROBAR QUE TODOS LOS MENUS NO PETAN AL INTRODUCIR COSAS RARAS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

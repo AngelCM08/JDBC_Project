@@ -3,16 +3,14 @@ import actions.DB_Deletes;
 import actions.DB_Selects;
 import ui.ACBMenu;
 
-import java.io.IOException;
 import java.sql.Connection;
-import java.sql.SQLException;
-import java.text.ParseException;
 import java.util.Scanner;
 
 public class ACBMain {
 	public static Connection c;
 
-	public static void main(String[] args) throws IOException, SQLException, ParseException {
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
 		ACBMenu menu = new ACBMenu();
 		ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
 		c = connectionFactory.connect();
@@ -54,7 +52,6 @@ public class ACBMain {
 				break;
 
 			case 6: // Eliminar registro.
-				Scanner sc = new Scanner(System.in);
 				opt = menu.DeleteMenu();
 				if(opt == 3 || (table = menu.TablesMenu()).equals("")) break;
 				switch (opt) {
@@ -68,7 +65,9 @@ public class ACBMain {
 				break;
 
 			case 7: // Eliminar registros segun condición.
-
+				if((table = menu.TablesMenu()).equals("")) break;
+				DB_Selects.selectAllTable(c, table);
+				DB_Deletes.deleteTableRegisterByCondition(c, table, menu.ColumnsMenu(c, table));
 				break;
 
 			case 8: // Vaciar tablas.

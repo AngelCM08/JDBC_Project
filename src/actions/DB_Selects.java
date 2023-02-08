@@ -29,7 +29,7 @@ public class DB_Selects {
     public static void selectSpecificText(Connection c, String tabla, String[] columna){
         Scanner sc = new Scanner(System.in);
         try {
-            System.out.println("Que texto quieres buscar en la columna "+columna[0]);
+            System.out.print("Que texto quieres buscar en la columna "+columna[0]+": ");
             PreparedStatement pst;
             if(columna[1].equals("integer")){
                 pst = c.prepareStatement("SELECT * FROM "+tabla+" WHERE "+columna[0]+" = ?");
@@ -46,6 +46,7 @@ public class DB_Selects {
                     if(i != result.getMetaData().getColumnCount()) System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i) + " | ");
                     else System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i));
                 }
+                System.out.println();
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

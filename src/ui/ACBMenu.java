@@ -23,7 +23,7 @@ public class ACBMenu {
 		System.out.println("4. Insertar registro.");
 		System.out.println("5. Actualizar registro.");
 		System.out.println("6. Eliminar datos.");
-		System.out.println("7. Eliminar registros según condición.");
+		System.out.println("7. Eliminar registro que contengan un texto específico.");
 		System.out.println("8. Vaciar tablas.");
 		System.out.println("9. Salir.");
 		System.out.print("Escoger opción: ");
@@ -113,7 +113,6 @@ public class ACBMenu {
 		} while (option < 1 || option > 3);
 		return option;
 	}
-
 
 	/*public Identity authenticate(int tries) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
