@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_2_23_23_07_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/DB_Deletes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/DB_Selects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ACBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACBMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/monstruo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/monstruo.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/objeto.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/objeto.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/personaje.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/personaje.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ACBMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ACBMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -121,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675727668832</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Actions WIP">
+      <created>1675795735390</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675795735390</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">

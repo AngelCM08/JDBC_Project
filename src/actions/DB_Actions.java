@@ -1,4 +1,4 @@
-package action;
+package actions;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
@@ -10,10 +10,10 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class Actions {
+
+public class DB_Actions {
     public static void restart(Connection c){
         try {
             Statement st = null;
@@ -98,76 +98,6 @@ public class Actions {
             entities.remove(0);
             return entities;
         } catch (IOException | CsvException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static void selectAllTable(Connection c, String tabla){
-        try {
-            ResultSet s = c.createStatement().executeQuery("SELECT * FROM "+tabla);
-            while(s.next()){
-                for (int i = 1; i <= s.getMetaData().getColumnCount(); i++) {
-                    if(i != s.getMetaData().getColumnCount()) System.out.print(s.getMetaData().getColumnName(i) +": "+ s.getString(i) + "\t|\t");
-                    else System.out.print(s.getMetaData().getColumnName(i) +": "+ s.getString(i));
-                }
-                System.out.println();
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    //Seleccionar todos los elementos que contengan un texto concreto.
-    //TODO seleccion multiple de columnas y textos
-    public static void selectSpecificText(Connection c, String tabla, String[] columna){
-        Scanner sc = new Scanner(System.in);
-        try {
-            System.out.println("Que texto quieres buscar en la columna "+columna[0]);
-            PreparedStatement pst;
-            if(columna[1].equals("integer")){
-                pst = c.prepareStatement("SELECT * FROM "+tabla+" WHERE "+columna[0]+" = ?");
-                pst.setInt(1, sc.nextInt());
-                sc.nextLine();
-            }else{
-                pst = c.prepareStatement("SELECT * FROM "+tabla+" WHERE "+columna[0]+" ILIKE ?");
-                pst.setString(1, sc.nextLine());
-            }
-
-            ResultSet result = pst.executeQuery();
-            while(result.next()){
-                for (int i = 1; i <= result.getMetaData().getColumnCount(); i++) {
-                    if(i != result.getMetaData().getColumnCount()) System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i) + " | ");
-                    else System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i));
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    //TODO Seleccionar todos los elementos que cumplan una condición.
-    public static void selectByCondition(Connection c, String tabla, String[] columna) {
-        //TODO elementos superiores al valor indicado
-
-        //TODO elementos inferiores al valor indicado
-
-        //TODO elementos de tamaño inferior o superior al indicado en cantidad de caracteres
-
-    }
-
-    //TO DO Seleccionar una columna específica.
-    public static void selectColumn(Connection c, String tabla, String[] columna) {
-        try {
-            PreparedStatement pst = c.prepareStatement("SELECT "+columna[0]+" FROM "+tabla);
-            System.out.println(pst.toString());
-            ResultSet result = pst.executeQuery();
-            System.out.println("Mostrando columna "+columna[0]+" de la tabla "+tabla);
-            int i = 1;
-            while(result.next()){
-                System.out.println(i+": "+ result.getString(1));
-                i++;
-            }
-        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
