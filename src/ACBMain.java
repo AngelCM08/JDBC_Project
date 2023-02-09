@@ -7,10 +7,18 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
+ * Clase principal, donde se crea la conexión con la BBDD y se gestionan las peticiones del usuario.
  *
+ * @author Ángel Castro Merino
  */
 public class ACBMain {
 	public static Connection c;
+
+	/**
+	 * Función principal del programa donde se gestionan las peticiones del usuario.
+	 *
+	 * @param args No se utiliza en esta implementación.
+	 */
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		ACBMenu menu = new ACBMenu();
@@ -29,10 +37,12 @@ public class ACBMain {
 				DB_Actions.FillTable(c, "personaje");
 				DB_Actions.FillTable(c, "monstruo");
 				break;
+
 			case 2: // Consultas.
 				if((table = menu.TablesMenu()).equals("")) break;
 				DB_Selects.selectAllTable(c, table);
 				break;
+
 			case 3: // Consultas específicas.
 				opt = menu.ConsultasEspecificasMenu();
 				if(opt == 4 || (table = menu.TablesMenu()).equals("")) break;
@@ -99,7 +109,7 @@ public class ACBMain {
 		try {
 			c.close();
 		} catch (SQLException e) {
-			System.out.println("Error al tancar la BBDD");
+			System.out.println("Error al cerrar la BBDD");
 		}
 	}
 }

@@ -9,21 +9,25 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ *	Clase en la que se ubican las funciones principales de comunicación entre el usuario y el programa.
  *
+ * 	@author Ángel Castro Merino
  */
 public class ACBMenu {
 	private int option;
 	Scanner sc = new Scanner(System.in);
 
 	/**
-	 *
+	 * Constructor de la clase para acceder a los menús desde cualquier otra clase.
 	 */
 	public ACBMenu() {
 		super();
 	}
 
 	/**
-	 * @return
+	 * Menú con las opciones principales de la aplicación.
+	 *
+	 * @return valor entero introducido por el usuario para seleccionar la opción deseada.
 	 */
 	public int mainMenu() {
 		System.out.println(" \nMENU PRINCIPAL \n");
@@ -43,7 +47,9 @@ public class ACBMenu {
 	}
 
 	/**
-	 * @return
+	 * Menú para seleccionar una de las tablas de la BBDD.
+	 *
+	 * @return nombre de la tabla escogida por el usuario a través de un valor entero.
 	 */
 	public String TablesMenu() {
 		do {
@@ -67,9 +73,13 @@ public class ACBMenu {
 	}
 
 	/**
-	 * @param c
-	 * @param tabla
-	 * @return
+	 * Función que muestra un listado de todas las columnas de la tabla pasada por parámetro.
+	 * Permite al usuario escoger que columna quiere seleccionar.
+	 *
+	 * @param c Objeto de la conexión con la BBDD.
+	 * @param tabla Nombre de la tabla la cuál se quieren listar sus columnas.
+	 * @return Array que contiene 2 strings, en el primer valor se encuentra el nombre de la columna seleccionada,
+	 * en el segundo indica el tipo de dato que es ésa columna en la BBDD.
 	 */
 	public String[] ColumnsMenu(Connection c, String tabla) {
 		List<List<String>> header = DB_Actions.GetHeader(c, tabla);
@@ -83,7 +93,9 @@ public class ACBMenu {
 	}
 
 	/**
-	 * @return
+	 * Menú con las opciones para consultas específicas de la BBDD.
+	 *
+	 * @return valor entero introducido por el usuario para seleccionar la opción deseada.
 	 */
 	public int ConsultasEspecificasMenu() {
 		do {
@@ -102,7 +114,9 @@ public class ACBMenu {
 	}
 
 	/**
-	 * @return
+	 * Menú con las opciones para consultas por condiciones de la BBDD.
+	 *
+	 * @return valor entero introducido por el usuario para seleccionar la opción deseada.
 	 */
 	public int ConsultasPorCondicionesMenu() {
 		do {
@@ -119,7 +133,9 @@ public class ACBMenu {
 	}
 
 	/**
-	 * @return
+	 * Menú con las opciones de eliminado de la BBDD.
+	 *
+	 * @return valor entero introducido por el usuario para seleccionar la opción deseada.
 	 */
 	public int DeleteMenu() {
 		do {
@@ -136,7 +152,9 @@ public class ACBMenu {
 	}
 
 	/**
-	 * @return
+	 * Menú con las opciones de actualización de la BBDD.
+	 *
+	 * @return valor entero introducido por el usuario para seleccionar la opción deseada.
 	 */
 	public int UpdateMenu() {
 		do {
@@ -153,8 +171,12 @@ public class ACBMenu {
 	}
 
 	/**
-	 * @param result
-	 * @return
+	 * Función que muestra un listado de todos los valores de cada una de las columnas de una tabla consultada. De la
+	 * cuál se recibe el objeto ResultSet, que es la respuesta a la consulta. Permite al usuario escoger que atributo
+	 * quiere seleccionar.
+	 *
+	 * @param result respuesta a una consulta.
+	 * @return valor entero introducido por el usuario para seleccionar la opción deseada.
 	 */
 	public int SelectFieldMenu(ResultSet result){
 		try {
