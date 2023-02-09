@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP">
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Error Control">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ACBMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ACBMain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui/ACBMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ui/ACBMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ACBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JDBC_Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Deletes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Deletes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Inserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Inserts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Selects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Selects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Updates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Updates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connection/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/connection/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ACBMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/JDBC_Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675365936649</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Error Control">
+      <created>1675958917728</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675958917728</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -202,6 +193,7 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="Actions WIP (OJO REVISAR)" />
     <MESSAGE value="Actions WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actions WIP" />
+    <MESSAGE value="Error Control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error Control" />
   </component>
 </project>
