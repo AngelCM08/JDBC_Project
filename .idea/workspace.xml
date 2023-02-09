@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Error Control">
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Last commit">
+      <change afterPath="$PROJECT_DIR$/src/actions/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/connection/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/package-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -171,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675958917728</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Last commit">
+      <created>1675959700856</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675959700856</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -194,6 +206,7 @@
     <MESSAGE value="Actions WIP (OJO REVISAR)" />
     <MESSAGE value="Actions WIP" />
     <MESSAGE value="Error Control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error Control" />
+    <MESSAGE value="Last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last commit" />
   </component>
 </project>
