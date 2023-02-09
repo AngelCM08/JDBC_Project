@@ -2,7 +2,6 @@ package actions;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -11,7 +10,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
 
 public class DB_Actions {
     public static void restart(Connection c){
@@ -26,16 +24,14 @@ public class DB_Actions {
 
     public static void FillTable(Connection c, String tabla){
         String values = "";
-        List<String> header = new ArrayList<>();
-        List<String> data_types = new ArrayList<>();
+        List<String> header;
+        List<String> data_types;
         List<String[]> data = GetDataFromCSV(tabla);
 
         try {
             List<List<String>> columnMetaData = GetHeader(c,tabla);
             header = columnMetaData.get(0);
             data_types = columnMetaData.get(1);
-            //System.out.println(Arrays.toString(header.toArray()));
-            //System.out.println(Arrays.toString(data_types.toArray()));
 
             for (int i = 0; i < header.size(); i++) {
                 if(i == 0) values = values.concat("(?, ");
@@ -48,10 +44,8 @@ public class DB_Actions {
 
             for (int i = 0; i < data.size(); i++) {
                 String[] fields = data.get(i);
-                //System.out.println(Arrays.toString(fields));
                 try {
                     for (int j = 0; j < fields.length; j++) {
-                        //System.out.println(fields[j]);
                         if(data_types.get(j).equals("integer")){
                             ps_insert.setInt(j+1, Integer.parseInt(fields[j]));
                         }else{
@@ -82,8 +76,6 @@ public class DB_Actions {
                 header.add(resultSet.getString(1));
                 data_types.add(resultSet.getString(2));
             }
-            //header.forEach(System.out::println);
-            //data_types.forEach(System.out::println);
             return List.of(header, data_types);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -99,15 +91,5 @@ public class DB_Actions {
         } catch (IOException | CsvException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public static void sortir(Connection c) {
-        System.out.println("ADÉU!");
-        try {
-            c.close();
-        } catch (SQLException e) {
-            System.out.println("Error al tancar la BBDD");
-        }
-        System.exit(0);
     }
 }

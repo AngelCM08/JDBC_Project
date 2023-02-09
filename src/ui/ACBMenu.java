@@ -30,9 +30,7 @@ public class ACBMenu {
 		System.out.println("9. Salir.");
 		System.out.print("Escoger opción: ");
 
-		option = sc.nextInt();
-
-		return option;
+		return sc.nextInt();
 	}
 
 	public String TablesMenu() {

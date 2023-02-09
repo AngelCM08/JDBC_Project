@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DB_Updates {
-    //TODO Seleccionar un elemento concreto y permitir su modificación.
+    //TO DO Seleccionar un elemento concreto y permitir su modificación.
     public static void UpdateRegister(Connection c, String tabla, int row) {
         Scanner sc = new Scanner(System.in);
         List<List<String>> header = DB_Actions.GetHeader(c, tabla);
@@ -49,7 +49,6 @@ public class DB_Updates {
         }
     }
 
-    //TODO Posibilidad de modificar diferentes registros de información.
     public static void updateRegistersByCondition(Connection c, String tabla, String[] columna) {
         Scanner sc = new Scanner(System.in);
         PreparedStatement insert_pst;
@@ -74,5 +73,4 @@ public class DB_Updates {
             throw new RuntimeException(e);
         }
     }
-
 }

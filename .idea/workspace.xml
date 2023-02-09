@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP">
-      <change afterPath="$PROJECT_DIR$/src/actions/DB_Inserts.java" afterDir="false" />
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ACBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACBMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ACBMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ACBMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +60,9 @@
       <recent name="$PROJECT_DIR$/src/data" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/connection" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -148,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675900661571</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Actions Completed">
+      <created>1675903536289</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675903536289</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -157,6 +167,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="Actions WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actions WIP" />
+    <MESSAGE value="Actions Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actions Completed" />
   </component>
 </project>

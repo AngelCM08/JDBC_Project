@@ -3,11 +3,11 @@ import connection.ConnectionFactory;
 import ui.ACBMenu;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class ACBMain {
 	public static Connection c;
-
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		ACBMenu menu = new ACBMenu();
@@ -86,17 +86,17 @@ public class ACBMain {
 				DB_Actions.restart(c);
 				break;
 
-			case 9: // Finalizar la ejecución del programa.
-				DB_Actions.sortir(c);
-				break;
-
 			default:
 				System.out.println("Introdueixi una de les opcions anteriors");
 				break;
 			}
 			option = menu.mainMenu();
 		}
-
+		System.out.println("\n**** ADÉU! ****");
+		try {
+			c.close();
+		} catch (SQLException e) {
+			System.out.println("Error al tancar la BBDD");
+		}
 	}
-
 }

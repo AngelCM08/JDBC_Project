@@ -49,7 +49,6 @@ public class DB_Deletes {
                 insert_pst = c.prepareStatement("DELETE FROM "+tabla+" WHERE "+columna[0]+" ILIKE ?");
                 insert_pst.setString(1, text);
             }
-
             ResultSet result = select_pst.executeQuery();
             insert_pst.executeUpdate();
 
