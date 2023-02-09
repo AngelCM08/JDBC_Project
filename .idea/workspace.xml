@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Code Cleaning">
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Deletes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Deletes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Inserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Inserts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DB_Selects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Selects.java" afterDir="false" />
-    </list>
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="All comments DONE" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675904028617</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="All comments DONE">
+      <created>1675949843705</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675949843705</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -176,6 +178,7 @@
     <MESSAGE value="Actions WIP" />
     <MESSAGE value="Actions Completed" />
     <MESSAGE value="Code Cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code Cleaning" />
+    <MESSAGE value="All comments DONE" />
+    <option name="LAST_COMMIT_MESSAGE" value="All comments DONE" />
   </component>
 </project>
