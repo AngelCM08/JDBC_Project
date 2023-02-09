@@ -20,8 +20,9 @@ public class DB_Deletes {
     public static void deleteTable(Connection c, String tabla){
         try {
             c.createStatement().executeUpdate("DROP TABLE "+tabla+" CASCADE");
+            System.out.println("\n**** LA TABLA '"+tabla+"' HA SIDO ELIMINADA ****");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** NO SE HA PODIDO ELIMINAR LA TABLA '"+tabla+"' ****");
         }
     }
 
@@ -36,8 +37,9 @@ public class DB_Deletes {
         String id = DB_Actions.GetHeader(c, tabla).get(0).get(0);
         try {
             c.createStatement().executeUpdate("DELETE FROM "+tabla+" WHERE "+id+" = "+register);
+            System.out.println("\n**** EL REGISTRO HA SIDO ELIMINADO ****");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** NO SE HA PODIDO ELIMINAR EL REGISTRO ****");
         }
     }
 
@@ -78,16 +80,16 @@ public class DB_Deletes {
             ResultSet result = select_pst.executeQuery();
             insert_pst.executeUpdate();
 
-            System.out.println("**** SE HAN ELIMINADO LOS SIGUIENTES REGISTROS ****");
+            System.out.println("\n**** SE HAN ELIMINADO LOS SIGUIENTES REGISTROS ****");
+            System.out.println();
             while(result.next()){
                 for (int i = 1; i <= result.getMetaData().getColumnCount(); i++) {
-                    if(i != result.getMetaData().getColumnCount()) System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i) + " | ");
-                    else System.out.print(result.getMetaData().getColumnName(i) +": "+ result.getString(i));
+                    System.out.println(result.getMetaData().getColumnName(i) +": "+ result.getString(i));
                 }
-                System.out.println();
+                System.out.println("\n--------------------------------------\n");
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
     }
 }

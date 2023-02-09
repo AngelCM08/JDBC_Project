@@ -29,7 +29,7 @@ public class DB_Inserts {
             String insert = rs.getString(1);
             values.add(String.valueOf(Integer.parseInt(insert)+1));
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
 
         System.out.println("**** INSERTAR REGISTRO EN '"+tabla+"' ****");
@@ -46,15 +46,18 @@ public class DB_Inserts {
         try {
             String insert = "INSERT INTO "+tabla+"("+header.get(0).toString().substring(1,header.get(0).toString().length()-1)+") VALUES "+values_question+";";
             PreparedStatement pst = c.prepareStatement(insert);
-            for (int i = 1; i <= values.size(); i++) {
-                if(header.get(1).get(i-1).equals("integer")) pst.setInt(i, Integer.parseInt(values.get(i-1)));
-                else pst.setString(i, values.get(i-1));
+            try{
+                for (int i = 1; i <= values.size(); i++) {
+                    if(header.get(1).get(i-1).equals("integer")) pst.setInt(i, Integer.parseInt(values.get(i-1)));
+                    else pst.setString(i, values.get(i-1));
+                }
+                pst.executeUpdate();
+                System.out.println("**** REGISTRO INSERTADO CORRECTAMENTE ****");
+            }catch(Exception e){
+                System.out.println("**** ERROR AL INSERTAR LOS DATOS (NO SE HAN INSERTADO) ****");
             }
-            System.out.println(pst.toString());
-            pst.executeUpdate();
-            System.out.println("**** REGISTRO INSERTADO CORRECTAMENTE ****");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
     }
 }

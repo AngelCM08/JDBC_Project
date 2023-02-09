@@ -4,14 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="All comments DONE" />
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ACBMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ACBMain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ui/ACBMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ui/ACBMenu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ACBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JDBC_Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Deletes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Deletes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Inserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Inserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Selects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Selects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Updates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Updates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connection/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/connection/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ACBMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/JDBC_Menu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,6 +38,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="255fe539-c5e8-415f-b627-0ddd8de3bb0c" />
+        <option name="url" value="https://github.com/AngelCM08/JDBC_Project.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,6 +65,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
@@ -56,9 +86,20 @@
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/connection" />
-    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="JDBC_Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JDBC_Main" />
+      <module name="JDBC_Project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JDBC_Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -105,80 +146,62 @@
       <updated>1674157565367</updated>
     </task>
     <task id="LOCAL-00006" summary="Actions WIP">
-      <created>1674933664544</created>
+      <created>1675088584873</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1674933664545</updated>
+      <updated>1675088584873</updated>
     </task>
-    <task id="LOCAL-00007" summary="Actions WIP">
-      <created>1675727668832</created>
+    <task id="LOCAL-00007" summary="Actions WIP (OJO REVISAR)">
+      <created>1675097702826</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1675727668832</updated>
+      <updated>1675097702826</updated>
     </task>
     <task id="LOCAL-00008" summary="Actions WIP">
-      <created>1675795735390</created>
+      <created>1675181242440</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1675795735390</updated>
+      <updated>1675181242440</updated>
     </task>
     <task id="LOCAL-00009" summary="Actions WIP">
-      <created>1675816329528</created>
+      <created>1675184116663</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1675816329528</updated>
+      <updated>1675184116663</updated>
     </task>
     <task id="LOCAL-00010" summary="Actions WIP">
-      <created>1675888750073</created>
+      <created>1675365936649</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1675888750073</updated>
+      <updated>1675365936649</updated>
     </task>
-    <task id="LOCAL-00011" summary="Actions WIP">
-      <created>1675900661570</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1675900661571</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Actions Completed">
-      <created>1675903536289</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1675903536289</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Code Cleaning">
-      <created>1675904028617</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1675904028617</updated>
-    </task>
-    <task id="LOCAL-00014" summary="All comments DONE">
-      <created>1675949843705</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1675949843705</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First Commit" />
+    <MESSAGE value="Actions WIP (OJO REVISAR)" />
     <MESSAGE value="Actions WIP" />
-    <MESSAGE value="Actions Completed" />
-    <MESSAGE value="Code Cleaning" />
-    <MESSAGE value="All comments DONE" />
-    <option name="LAST_COMMIT_MESSAGE" value="All comments DONE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actions WIP" />
   </component>
 </project>

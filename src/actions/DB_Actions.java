@@ -27,7 +27,7 @@ public class DB_Actions {
             BufferedReader br = new BufferedReader(new FileReader("src/data/schema.sql"));
             st.execute(br.lines().collect(Collectors.joining(" \n")));
         } catch (FileNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
     }
 
@@ -70,11 +70,11 @@ public class DB_Actions {
                     System.out.println(ps_insert);
                     ps_insert.execute();
                 } catch (SQLException e) {
-                    throw new RuntimeException(e);
+                    System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
                 }
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
     }
 
@@ -99,10 +99,10 @@ public class DB_Actions {
                 header.add(resultSet.getString(1));
                 data_types.add(resultSet.getString(2));
             }
-            return List.of(header, data_types);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
+        return List.of(header, data_types);
     }
 
     /**
@@ -112,13 +112,14 @@ public class DB_Actions {
      * @return Lista de arrays de Strings, cada array es una fila de la BBDD.
      */
     public static List<String[]> GetDataFromCSV(String tabla){
+        List<String[]> entities = null;
         try {
             CSVReader reader = new CSVReader(new FileReader("src/data/"+tabla+".csv"));
-            List<String[]> entities = reader.readAll();
+            entities = reader.readAll();
             entities.remove(0);
-            return entities;
         } catch (IOException | CsvException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
+        return entities;
     }
 }

@@ -1,6 +1,6 @@
 package actions;
 
-import ui.ACBMenu;
+import ui.JDBC_Menu;
 
 import java.sql.*;
 import java.util.List;
@@ -22,7 +22,7 @@ public class DB_Updates {
     public static void UpdateRegister(Connection c, String tabla, int row) {
         Scanner sc = new Scanner(System.in);
         List<List<String>> header = DB_Actions.GetHeader(c, tabla);
-        ACBMenu menu = new ACBMenu();
+        JDBC_Menu menu = new JDBC_Menu();
         PreparedStatement pst;
         String column;
         String change;
@@ -30,7 +30,8 @@ public class DB_Updates {
         int resp;
 
         try {
-            Statement st = c.createStatement();
+            Statement st = c.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE);
             do{
                 ResultSet result = st.executeQuery("SELECT * FROM "+tabla+" WHERE "+header.get(0).get(0)+" = "+row);
                 if((resp = menu.SelectFieldMenu(result)) != 0){
@@ -56,7 +57,7 @@ public class DB_Updates {
                 sc.nextLine();
             }while(!out);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
     }
 
@@ -90,7 +91,7 @@ public class DB_Updates {
             }
             System.out.println("**** SE HAN ACTUALIZADO "+insert_pst.executeUpdate()+" REGISTROS ****");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("\n**** ERROR! LA TAREA NO HA PODIDO REALIZARSE CORRECTAMENTE ****");
         }
     }
 }

@@ -1,6 +1,6 @@
 import actions.*;
 import connection.ConnectionFactory;
-import ui.ACBMenu;
+import ui.JDBC_Menu;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Ángel Castro Merino
  */
-public class ACBMain {
+public class JDBC_Main {
 	public static Connection c;
 
 	/**
@@ -21,7 +21,7 @@ public class ACBMain {
 	 */
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-		ACBMenu menu = new ACBMenu();
+		JDBC_Menu menu = new JDBC_Menu();
 		ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
 		c = connectionFactory.connect();
 		String table;
@@ -97,10 +97,7 @@ public class ACBMain {
 
 			case 8: // Vaciar tablas.
 				DB_Actions.restart(c);
-				break;
-
-			default:
-				System.out.println("Introduce una de les opciones anteriores");
+				System.out.println("\n**** SE HAN VACIADO TODAS LAS TABLAS ****");
 				break;
 			}
 			option = menu.mainMenu();
