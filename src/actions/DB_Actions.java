@@ -11,7 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ *
+ */
 public class DB_Actions {
+    /**
+     * @param c
+     */
     public static void restart(Connection c){
         try {
             Statement st = c.createStatement();
@@ -22,6 +28,10 @@ public class DB_Actions {
         }
     }
 
+    /**
+     * @param c
+     * @param tabla
+     */
     public static void FillTable(Connection c, String tabla){
         String values = "";
         List<String> header;
@@ -63,6 +73,11 @@ public class DB_Actions {
         }
     }
 
+    /**
+     * @param c
+     * @param tabla
+     * @return
+     */
     public static List<List<String>> GetHeader(Connection c, String tabla) {
         List<String> header = new ArrayList<>();
         List<String> data_types = new ArrayList<>();
@@ -82,6 +97,10 @@ public class DB_Actions {
         }
     }
 
+    /**
+     * @param tabla
+     * @return
+     */
     public static List<String[]> GetDataFromCSV(String tabla){
         try {
             CSVReader reader = new CSVReader(new FileReader("src/data/"+tabla+".csv"));

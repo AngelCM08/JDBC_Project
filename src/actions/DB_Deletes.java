@@ -6,7 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class DB_Deletes {
+    /**
+     * @param c
+     * @param tabla
+     */
     public static void deleteTable(Connection c, String tabla){
         try {
             c.createStatement().executeUpdate("DROP TABLE "+tabla+" CASCADE");
@@ -14,6 +21,12 @@ public class DB_Deletes {
             throw new RuntimeException(e);
         }
     }
+
+    /**
+     * @param c
+     * @param tabla
+     * @param register
+     */
     public static void deleteTableRegister(Connection c, String tabla, int register) {
         String id = DB_Actions.GetHeader(c, tabla).get(0).get(0);
         try {
@@ -23,6 +36,11 @@ public class DB_Deletes {
         }
     }
 
+    /**
+     * @param c
+     * @param tabla
+     * @param columna
+     */
     public static void deleteTableRegisterByCondition(Connection c, String tabla, String[] columna) {
         Scanner sc = new Scanner(System.in);
         String text;

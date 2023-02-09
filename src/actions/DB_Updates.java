@@ -6,7 +6,15 @@ import java.sql.*;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class DB_Updates {
+    /**
+     * @param c
+     * @param tabla
+     * @param row
+     */
     //TO DO Seleccionar un elemento concreto y permitir su modificación.
     public static void UpdateRegister(Connection c, String tabla, int row) {
         Scanner sc = new Scanner(System.in);
@@ -49,6 +57,11 @@ public class DB_Updates {
         }
     }
 
+    /**
+     * @param c
+     * @param tabla
+     * @param columna
+     */
     public static void updateRegistersByCondition(Connection c, String tabla, String[] columna) {
         Scanner sc = new Scanner(System.in);
         PreparedStatement insert_pst;

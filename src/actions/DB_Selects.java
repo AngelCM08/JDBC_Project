@@ -1,4 +1,5 @@
 package actions;
+
 import ui.ACBMenu;
 
 import java.sql.Connection;
@@ -7,7 +8,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class DB_Selects {
+    /**
+     * @param c
+     * @param tabla
+     */
     public static void selectAllTable(Connection c, String tabla){
         try {
             ResultSet s = c.createStatement().executeQuery("SELECT * FROM "+tabla);
@@ -25,6 +33,11 @@ public class DB_Selects {
         }
     }
 
+    /**
+     * @param c
+     * @param tabla
+     * @param columna
+     */
     //Seleccionar todos los elementos que contengan un texto concreto.
     public static void selectSpecificText(Connection c, String tabla, String[] columna){
         Scanner sc = new Scanner(System.in);
@@ -53,6 +66,11 @@ public class DB_Selects {
         }
     }
 
+    /**
+     * @param c
+     * @param tabla
+     * @param columna
+     */
     //TO DO Seleccionar todos los elementos que cumplan una condición.
     //TO DO elementos superiores o inferiores al valor indicado
     //TO DO elementos de tamaño inferior o superior al indicado en cantidad de caracteres
@@ -93,6 +111,11 @@ public class DB_Selects {
         }
     }
 
+    /**
+     * @param c
+     * @param tabla
+     * @param columna
+     */
     //TO DO Seleccionar una columna específica.
     public static void selectColumn(Connection c, String tabla, String[] columna) {
         try {

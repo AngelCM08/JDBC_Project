@@ -6,6 +6,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class ACBMain {
 	public static Connection c;
 	public static void main(String[] args){
@@ -76,7 +79,7 @@ public class ACBMain {
 				}
 				break;
 
-			case 7: // Eliminar registros segun condición.
+			case 7: // Eliminar registros según condición.
 				if((table = menu.TablesMenu()).equals("")) break;
 				DB_Selects.selectAllTable(c, table);
 				DB_Deletes.deleteTableRegisterByCondition(c, table, menu.ColumnsMenu(c, table));
@@ -87,12 +90,12 @@ public class ACBMain {
 				break;
 
 			default:
-				System.out.println("Introdueixi una de les opcions anteriors");
+				System.out.println("Introduce una de les opciones anteriores");
 				break;
 			}
 			option = menu.mainMenu();
 		}
-		System.out.println("\n**** ADÉU! ****");
+		System.out.println("\n**** ADIÓS! ****");
 		try {
 			c.close();
 		} catch (SQLException e) {

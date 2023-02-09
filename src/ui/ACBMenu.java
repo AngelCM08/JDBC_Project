@@ -8,15 +8,24 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class ACBMenu {
 	private int option;
+	Scanner sc = new Scanner(System.in);
 
+	/**
+	 *
+	 */
 	public ACBMenu() {
 		super();
 	}
 
+	/**
+	 * @return
+	 */
 	public int mainMenu() {
-		Scanner sc = new Scanner(System.in);
 		System.out.println(" \nMENU PRINCIPAL \n");
 
 		System.out.println("1. Poblar o restaurar tablas.");
@@ -33,8 +42,10 @@ public class ACBMenu {
 		return sc.nextInt();
 	}
 
+	/**
+	 * @return
+	 */
 	public String TablesMenu() {
-		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println(" \nSOBRE QUE TABLA QUIERES REALIZAR LA ACCIÓN\n");
 
@@ -55,8 +66,12 @@ public class ACBMenu {
 		return "";
 	}
 
+	/**
+	 * @param c
+	 * @param tabla
+	 * @return
+	 */
 	public String[] ColumnsMenu(Connection c, String tabla) {
-		Scanner sc = new Scanner(System.in);
 		List<List<String>> header = DB_Actions.GetHeader(c, tabla);
 
 		for (int i = 0; i < header.get(0).size(); i++) {
@@ -67,8 +82,10 @@ public class ACBMenu {
 		return new String[]{header.get(0).get(index), header.get(1).get(index)};
 	}
 
+	/**
+	 * @return
+	 */
 	public int ConsultasEspecificasMenu() {
-		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println(" \nQUE TIPO DE ACCIÓN QUIERES REALIZAR\n");
 
@@ -84,8 +101,10 @@ public class ACBMenu {
 		return option;
 	}
 
+	/**
+	 * @return
+	 */
 	public int ConsultasPorCondicionesMenu() {
-		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println(" \nQUE TIPO DE ACCIÓN QUIERES REALIZAR\n");
 
@@ -99,8 +118,10 @@ public class ACBMenu {
 		return option;
 	}
 
+	/**
+	 * @return
+	 */
 	public int DeleteMenu() {
-		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println(" \nQUE TIPO DE ACCIÓN QUIERES REALIZAR\n");
 
@@ -114,8 +135,10 @@ public class ACBMenu {
 		return option;
 	}
 
+	/**
+	 * @return
+	 */
 	public int UpdateMenu() {
-		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println(" \nQUE TIPO DE ACCIÓN QUIERES REALIZAR\n");
 
@@ -129,8 +152,11 @@ public class ACBMenu {
 		return option;
 	}
 
+	/**
+	 * @param result
+	 * @return
+	 */
 	public int SelectFieldMenu(ResultSet result){
-		Scanner sc = new Scanner(System.in);
 		try {
 			int columnCount = result.getMetaData().getColumnCount();
 			do {
