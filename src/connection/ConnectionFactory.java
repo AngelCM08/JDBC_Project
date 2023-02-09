@@ -1,3 +1,5 @@
+package connection;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -46,7 +48,7 @@ public class ConnectionFactory {
 	 */
 	public void init() {
 		Properties prop = new Properties();
-		InputStream propStream = this.getClass().getClassLoader().getResourceAsStream("db.properties");
+		InputStream propStream = this.getClass().getClassLoader().getResourceAsStream("connection/db.properties");
 
 		try {
 			prop.load(propStream);

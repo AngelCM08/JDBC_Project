@@ -1,7 +1,5 @@
-import actions.DB_Actions;
-import actions.DB_Deletes;
-import actions.DB_Selects;
-import actions.DB_Updates;
+import actions.*;
+import connection.ConnectionFactory;
 import ui.ACBMenu;
 
 import java.sql.Connection;
@@ -45,7 +43,8 @@ public class ACBMain {
 				break;
 
 			case 4: // Insertar registro.
-
+				if((table = menu.TablesMenu()).equals("")) break;
+				DB_Inserts.InsertRegister(c, table);
 				break;
 
 			case 5: // Actualizar registro.
