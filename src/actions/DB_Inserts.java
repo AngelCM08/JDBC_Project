@@ -6,12 +6,15 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
+ *  Clase en la que hay funciones estáticas para acciones relacionadas
+ *  con la inserción de registros en la BBDD.
  */
 public class DB_Inserts {
     /**
-     * @param c
-     * @param tabla
+     * Función que permite insertar registros en la tabla seleccionada por el usuario.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla en la que se quiere insertar un registro.
      */
     public static void InsertRegister(Connection c, String tabla) {
         Scanner sc = new Scanner(System.in);

@@ -12,11 +12,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- *
+ *  Clase en la que hay funciones estáticas para acciones relacionadas con la BBDD en general
+ *  (Crear la BBDD, rellenarla o mostrar las cabeceras de una tabla)
  */
 public class DB_Actions {
     /**
-     * @param c
+     * Función que ejecuta las sentencias SQL de creación de BBDD almacenadas en el archivo "src/data/schema.sql".
+     *
+     * @param c Objeto de la conexión con la BBDD.
      */
     public static void restart(Connection c){
         try {
@@ -29,8 +32,10 @@ public class DB_Actions {
     }
 
     /**
-     * @param c
-     * @param tabla
+     * Función que permite rellenar las tablas principales de la BBDD.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla la cuál se quiere rellenar.
      */
     public static void FillTable(Connection c, String tabla){
         String values = "";
@@ -74,9 +79,12 @@ public class DB_Actions {
     }
 
     /**
-     * @param c
-     * @param tabla
-     * @return
+     * Función que devuelve dos listas, una con los nombres de las columnas y otra
+     * con los tipos de dato de cada una de ellas en la BBDD.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla la cuál se quieren listar sus columnas.
+     * @return Retorna una lista con las dos listas de datos mencionadas en la descripción de la función.
      */
     public static List<List<String>> GetHeader(Connection c, String tabla) {
         List<String> header = new ArrayList<>();
@@ -98,8 +106,10 @@ public class DB_Actions {
     }
 
     /**
-     * @param tabla
-     * @return
+     * Función que permite seleccionar el archivo CSV que contiene los datos de relleno de una tabla.
+     *
+     * @param tabla Nombre de la tabla la cuál se quieren listar sus columnas.
+     * @return Lista de arrays de Strings, cada array es una fila de la BBDD.
      */
     public static List<String[]> GetDataFromCSV(String tabla){
         try {

@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Code Cleaning">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ACBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACBMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ACBMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ACBMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Deletes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Deletes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Inserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Inserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Selects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Selects.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

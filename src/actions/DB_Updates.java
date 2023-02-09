@@ -7,13 +7,16 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
+ *  Clase en la que hay funciones estáticas para acciones relacionadas
+ *  con la actualización de tablas y registros de la BBDD.
  */
 public class DB_Updates {
     /**
-     * @param c
-     * @param tabla
-     * @param row
+     * Función que muestra el registro de la tabla seleccionado por el usuario para modificar sus campos.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla de la que se quieren actualizar registros.
+     * @param row Entero que indica el valor de la Primary Key del registro que se quiere actualizar.
      */
     //TO DO Seleccionar un elemento concreto y permitir su modificación.
     public static void UpdateRegister(Connection c, String tabla, int row) {
@@ -58,9 +61,13 @@ public class DB_Updates {
     }
 
     /**
-     * @param c
-     * @param tabla
-     * @param columna
+     * Función que actualiza todos los registros de la tabla pasada por parámetro
+     * cuya información en la columna indicada coincida con el valor introducido
+     * por el usuario, sustituyendolo por otro valor introducido por el usuario.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla de la que se quieren actualizar registros.
+     * @param columna Array que indica el nombre y tipo de dato de la columna seleccionada para comparar.
      */
     public static void updateRegistersByCondition(Connection c, String tabla, String[] columna) {
         Scanner sc = new Scanner(System.in);

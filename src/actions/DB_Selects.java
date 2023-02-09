@@ -9,12 +9,16 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
- *
+ *  Clase en la que hay funciones estáticas para acciones relacionadas
+ *  con la selección de tablas y registros de la BBDD.
  */
 public class DB_Selects {
     /**
-     * @param c
-     * @param tabla
+     * Función que permite mostrar el contenido de los registros de la tabla seleccionada por el usuario.
+     * Cabe mencionar que no se muestra el icono en éstos casos por temas de formateo de la consola.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla que se quiere mostrar.
      */
     public static void selectAllTable(Connection c, String tabla){
         try {
@@ -34,9 +38,12 @@ public class DB_Selects {
     }
 
     /**
-     * @param c
-     * @param tabla
-     * @param columna
+     * Función que muestra los registros de la tabla pasada por parámetro cuya información
+     * en la columna indicada coincida con el valor introducido por el usuario.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla de la que se quieren mostrar registros.
+     * @param columna Array que indica el nombre y tipo de dato de la columna seleccionada para comparar.
      */
     //Seleccionar todos los elementos que contengan un texto concreto.
     public static void selectSpecificText(Connection c, String tabla, String[] columna){
@@ -67,13 +74,14 @@ public class DB_Selects {
     }
 
     /**
-     * @param c
-     * @param tabla
-     * @param columna
+     * Función que muestra los registros de la tabla pasada por parámetro cuya información
+     * en la columna indicada coincida con el valor introducido por el usuario.
+     * Muy similar a la función "selectSpecificText" pero contemplando otro tipo de condición.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla de la que se quieren mostrar registros.
+     * @param columna Array que indica el nombre y tipo de dato de la columna seleccionada para comparar.
      */
-    //TO DO Seleccionar todos los elementos que cumplan una condición.
-    //TO DO elementos superiores o inferiores al valor indicado
-    //TO DO elementos de tamaño inferior o superior al indicado en cantidad de caracteres
     public static void selectByCondition(Connection c, String tabla, String[] columna) {
         Scanner sc = new Scanner(System.in);
         ACBMenu menu = new ACBMenu();
@@ -112,11 +120,12 @@ public class DB_Selects {
     }
 
     /**
-     * @param c
-     * @param tabla
-     * @param columna
+     * Función que muestra todos los campos de una tabla y columna específicamente introducida por el usuario.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla de la que se quieren mostrar campos.
+     * @param columna Array que indica el nombre y tipo de dato de la columna seleccionada.
      */
-    //TO DO Seleccionar una columna específica.
     public static void selectColumn(Connection c, String tabla, String[] columna) {
         try {
             PreparedStatement pst = c.prepareStatement("SELECT "+columna[0]+" FROM "+tabla);

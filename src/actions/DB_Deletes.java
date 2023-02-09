@@ -7,12 +7,15 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
- *
+ *  Clase en la que hay funciones estáticas para acciones relacionadas
+ *  con la eliminación de tablas o registros de la BBDD.
  */
 public class DB_Deletes {
     /**
-     * @param c
-     * @param tabla
+     * Función que elimina la tabla pasada por parámetro.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla que se quiere eliminar.
      */
     public static void deleteTable(Connection c, String tabla){
         try {
@@ -23,9 +26,11 @@ public class DB_Deletes {
     }
 
     /**
-     * @param c
-     * @param tabla
-     * @param register
+     * Función que elimina el registro de la tabla pasados por parámetro.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla de la que se quiere eliminar un registro.
+     * @param register Entero que indica el valor de la Primary Key del registro que se quiere eliminar.
      */
     public static void deleteTableRegister(Connection c, String tabla, int register) {
         String id = DB_Actions.GetHeader(c, tabla).get(0).get(0);
@@ -37,9 +42,12 @@ public class DB_Deletes {
     }
 
     /**
-     * @param c
-     * @param tabla
-     * @param columna
+     * Función que elimina el registro de la tabla pasada por parámetro cuya información
+     * en la columna indicada coincida con el valor introducido por el usuario.
+     *
+     * @param c Objeto de la conexión con la BBDD.
+     * @param tabla Nombre de la tabla de la que se quieren eliminar registros.
+     * @param columna Array que indica el nombre y tipo de dato de la columna seleccionada para comparar.
      */
     public static void deleteTableRegisterByCondition(Connection c, String tabla, String[] columna) {
         Scanner sc = new Scanner(System.in);
