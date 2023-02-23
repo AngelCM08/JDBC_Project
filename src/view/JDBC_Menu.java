@@ -1,4 +1,4 @@
-package ui;
+package view;
 
 import actions.DB_Actions;
 

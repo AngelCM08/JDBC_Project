@@ -1,6 +1,6 @@
 package actions;
 
-import ui.JDBC_Menu;
+import view.JDBC_Menu;
 
 import java.sql.*;
 import java.util.List;

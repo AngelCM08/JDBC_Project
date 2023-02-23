@@ -1,6 +1,6 @@
 import actions.*;
 import connection.ConnectionFactory;
-import ui.JDBC_Menu;
+import view.JDBC_Menu;
 
 import java.sql.Connection;
 import java.sql.SQLException;

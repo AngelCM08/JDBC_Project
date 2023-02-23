@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Last commit">
-      <change afterPath="$PROJECT_DIR$/src/actions/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connection/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4982ed4c-9642-4e67-aac7-836672156682" name="Changes" comment="Actions WIP">
+      <change afterPath="$PROJECT_DIR$/src/controllers/MonstruoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/ObjetoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/PersonajeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Monstruo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Objeto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Personaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_2_23_23_07_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_2_23_23_07__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_2_23_15_53_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_2_23_15_53__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_2_23_18_42_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_2_23_18_42__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ui/JDBC_Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ui/JDBC_Menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JDBC_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JDBC_Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Selects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Selects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DB_Updates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DB_Updates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/JDBC_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/JDBC_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/package-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,6 +46,9 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="5756b313-b19e-48e0-94c4-d8b0bb7b16c4" />
+  </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -62,7 +78,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dam2a/IdeaProjects/JDBC_Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/isard/IdeaProjects/JDBC_Project&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -204,9 +220,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First Commit" />
     <MESSAGE value="Actions WIP (OJO REVISAR)" />
-    <MESSAGE value="Actions WIP" />
     <MESSAGE value="Error Control" />
     <MESSAGE value="Last commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last commit" />
+    <MESSAGE value="Actions WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actions WIP" />
   </component>
 </project>
